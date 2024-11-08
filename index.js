@@ -2,6 +2,7 @@ const express = require("express");
 const { neon } = require("@neondatabase/serverless");
 const app = express();
 app.use(express.json());
+app.use(cors());
 const port = 3000;
 
 const sql = neon(
@@ -63,9 +64,9 @@ app.post("/api/addSale", async (req, res) => {
         RETURNING *
       `;
 
-    res.status(201).json({ventaCreada: true});
+    res.status(201).json({ ventaCreada: true });
   } catch (error) {
-    res.status(500).json({ventaCreada: false});
+    res.status(500).json({ ventaCreada: false });
   }
 });
 
