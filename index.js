@@ -1,4 +1,5 @@
 const express = require("express");
+const cors = require("cors");
 const { neon } = require("@neondatabase/serverless");
 const app = express();
 app.use(express.json());
