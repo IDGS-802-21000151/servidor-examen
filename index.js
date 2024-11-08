@@ -8,7 +8,7 @@ const sql = neon(
   "postgresql://bazar_owner:nfoQIw6qP3zi@ep-steep-wind-a53i566e.us-east-2.aws.neon.tech/bazar?sslmode=require"
 );
 
-app.get("/", () => {
+app.get("/", (req, res) => {
   res.send("API Funcionando");
 });
 
